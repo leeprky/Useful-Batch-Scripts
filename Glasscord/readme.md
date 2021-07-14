@@ -12,6 +12,8 @@ May Need To Run As Administrator
 
 # How It Works
 
+> Kills Canary
+
 > Creates A Folder In `%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app`
 
 > Then Opens It & Clones This Repo
