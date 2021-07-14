@@ -1,5 +1,5 @@
 # Useful-Batch-Scripts
-##Windows Scripts To Do With Powercord And Glasscord InstallerHelper
+## Windows Scripts To Do With Powercord And Glasscord InstallerHelper
 
 # Requires
 
