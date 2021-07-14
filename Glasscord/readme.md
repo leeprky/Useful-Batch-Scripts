@@ -25,6 +25,7 @@ May Need To Run As Administrator
 # GlasscordInstallerHelper.bat
 
 ```
+taskkill /IM DiscordCanary.exe /F
 rem 
 set "FirstDir=%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\GlasscordHelper"
 set "SecondDir=%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\GlasscordHelper"
