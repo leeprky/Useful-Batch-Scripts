@@ -7,7 +7,7 @@ Git: https://git-scm.com/downloads
 
 Node & Npm: https://nodejs.org
 
-Discord Canary: 
+Discord Canary: (For Installers Only)
 
 macOS: https://discord.com/api/download/canary?platform=osx
 
