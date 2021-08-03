@@ -2,9 +2,7 @@ mkdir %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\
 xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\Files"
 cd %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup
 git clone https://github.com/leeprky/RestoreGit
-mkdir %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
-xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\restore.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
-xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\cleanup.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
+xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\restore.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app"
 del /f /q "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit*.*"
 for /d %%d in ("%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit*.*") do rmdir /s /q "%%d"
 @Echo Off
