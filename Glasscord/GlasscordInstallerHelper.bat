@@ -2,9 +2,11 @@ mkdir %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\
 xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\Files"
 cd %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup
 git clone https://github.com/leeprky/RestoreGit
-xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\restore.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app"
+mkdir %USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
+xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\restore.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
+xcopy "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit\cleanup.bat" "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Restore&Cleanup"
 del /f /q "%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit*.*"
-for /d %%d in ("%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup*.*") do rmdir /s /q "%%d"
+for /d %%d in ("%USERPROFILE%\AppData\Local\DiscordCanary\app-1.0.37\resources\app\Backup\RestoreGit*.*") do rmdir /s /q "%%d"
 @Echo Off
 SETLOCAL EnableDelayedExpansion
 for /F "tokens=1,2 delims=#" %%a in ('"prompt #$H#$E# & echo on & for %%b in (1) do     rem"') do (
@@ -53,5 +55,3 @@ echo off
 findstr /v /a:%1 /R "^$" "%~2" nul
 del "%~2" > nul 2>&1i
 timeout 10 /nobreak
-@Echo Off
-quit
